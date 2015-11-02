@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Uet-yz-kRj">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--样式-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSg-aX-aqv">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="XNm-sA-BpW"/>
+                                </constraints>
+                                <state key="normal" title="标题+红字+cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XNm-sA-BpW"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="XNm-sA-BpW"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="showTitleAndDestructiveBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dH7-uD-715"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsG-XN-9bR">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.4210235577" green="1" blue="0.80629214410000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="LWk-ja-0Ta"/>
+                                </constraints>
+                                <state key="normal" title="title+多个选项+cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="LWk-ja-0Ta"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="LWk-ja-0Ta"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="showTitleAndAnyBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jRh-NR-mBa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9K-h0-QD2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.8107397865" green="0.92803644709999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="dNX-CH-ISx"/>
+                                </constraints>
+                                <state key="normal" title="多个选项+cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dNX-CH-ISx"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="dNX-CH-ISx"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="showAnyBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bEk-UW-4Oj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oe8-1h-oRM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.97838614479999997" green="1" blue="0.8809146135" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="380" id="GTO-Vh-KAe"/>
+                                    <constraint firstAttribute="height" constant="35" id="JtY-6h-etJ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="e6W-2X-gNq"/>
+                                </constraints>
+                                <state key="normal" title="红字+多个选项+cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GTO-Vh-KAe"/>
+                                        <exclude reference="JtY-6h-etJ"/>
+                                        <exclude reference="e6W-2X-gNq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="GTO-Vh-KAe"/>
+                                        <include reference="JtY-6h-etJ"/>
+                                        <exclude reference="e6W-2X-gNq"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="showDestructive:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nsb-IF-uvB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUr-YM-1nX">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.10515880700000001" green="1" blue="0.84579180190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="40Y-l3-Cms"/>
+                                </constraints>
+                                <state key="normal" title="显示一张图片和一个关闭按钮">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="40Y-l3-Cms"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="40Y-l3-Cms"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="showImage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8C6-LU-Let"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aUr-YM-1nX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="4NQ-4t-MSd"/>
+                            <constraint firstItem="Oe8-1h-oRM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="177" id="4fS-FN-lR5">
+                                <variation key="widthClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="hSg-aX-aqv" secondAttribute="trailing" constant="10" id="5El-nW-9PE"/>
+                            <constraint firstAttribute="trailing" secondItem="CsG-XN-9bR" secondAttribute="trailing" constant="10" id="Cw8-6b-ADh"/>
+                            <constraint firstItem="l9K-h0-QD2" firstAttribute="top" secondItem="Oe8-1h-oRM" secondAttribute="bottom" constant="21" id="Dnd-zC-Vam"/>
+                            <constraint firstAttribute="trailing" secondItem="Oe8-1h-oRM" secondAttribute="trailing" constant="177" id="HrU-W5-2dl">
+                                <variation key="widthClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="aUr-YM-1nX" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="P19-XY-fn0"/>
+                            <constraint firstItem="CsG-XN-9bR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="Rmn-Qf-qKC"/>
+                            <constraint firstItem="hSg-aX-aqv" firstAttribute="top" secondItem="CsG-XN-9bR" secondAttribute="bottom" constant="18" id="TYL-a5-1RZ"/>
+                            <constraint firstItem="CsG-XN-9bR" firstAttribute="top" secondItem="l9K-h0-QD2" secondAttribute="bottom" constant="22" id="YG5-j1-lha"/>
+                            <constraint firstItem="l9K-h0-QD2" firstAttribute="leading" secondItem="Oe8-1h-oRM" secondAttribute="leading" id="at2-m9-mLZ"/>
+                            <constraint firstAttribute="trailing" secondItem="l9K-h0-QD2" secondAttribute="trailing" constant="10" id="fX2-NB-Kdc"/>
+                            <constraint firstItem="l9K-h0-QD2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="iMi-IB-EEj"/>
+                            <constraint firstItem="Oe8-1h-oRM" firstAttribute="top" secondItem="aUr-YM-1nX" secondAttribute="bottom" constant="25" id="kfd-Oo-QKc">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="hSg-aX-aqv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="kqh-kP-Bo6"/>
+                            <constraint firstItem="l9K-h0-QD2" firstAttribute="trailing" secondItem="Oe8-1h-oRM" secondAttribute="trailing" id="mBG-JS-ny5"/>
+                            <constraint firstAttribute="trailing" secondItem="aUr-YM-1nX" secondAttribute="trailing" constant="10" id="qkT-vZ-FCl"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="hSg-aX-aqv"/>
+                                <exclude reference="CsG-XN-9bR"/>
+                                <exclude reference="l9K-h0-QD2"/>
+                                <exclude reference="Oe8-1h-oRM"/>
+                                <exclude reference="aUr-YM-1nX"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Cw8-6b-ADh"/>
+                                <exclude reference="Rmn-Qf-qKC"/>
+                                <exclude reference="YG5-j1-lha"/>
+                                <exclude reference="4fS-FN-lR5"/>
+                                <exclude reference="HrU-W5-2dl"/>
+                                <exclude reference="kfd-Oo-QKc"/>
+                                <exclude reference="4NQ-4t-MSd"/>
+                                <exclude reference="P19-XY-fn0"/>
+                                <exclude reference="qkT-vZ-FCl"/>
+                                <exclude reference="5El-nW-9PE"/>
+                                <exclude reference="TYL-a5-1RZ"/>
+                                <exclude reference="kqh-kP-Bo6"/>
+                                <exclude reference="Dnd-zC-Vam"/>
+                                <exclude reference="at2-m9-mLZ"/>
+                                <exclude reference="fX2-NB-Kdc"/>
+                                <exclude reference="iMi-IB-EEj"/>
+                                <exclude reference="mBG-JS-ny5"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="hSg-aX-aqv"/>
+                                <include reference="CsG-XN-9bR"/>
+                                <include reference="l9K-h0-QD2"/>
+                                <include reference="Oe8-1h-oRM"/>
+                                <include reference="aUr-YM-1nX"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Cw8-6b-ADh"/>
+                                <include reference="Rmn-Qf-qKC"/>
+                                <include reference="YG5-j1-lha"/>
+                                <include reference="4fS-FN-lR5"/>
+                                <include reference="HrU-W5-2dl"/>
+                                <include reference="kfd-Oo-QKc"/>
+                                <include reference="4NQ-4t-MSd"/>
+                                <include reference="P19-XY-fn0"/>
+                                <include reference="qkT-vZ-FCl"/>
+                                <include reference="5El-nW-9PE"/>
+                                <include reference="TYL-a5-1RZ"/>
+                                <include reference="kqh-kP-Bo6"/>
+                                <include reference="Dnd-zC-Vam"/>
+                                <exclude reference="at2-m9-mLZ"/>
+                                <include reference="fX2-NB-Kdc"/>
+                                <include reference="iMi-IB-EEj"/>
+                                <exclude reference="mBG-JS-ny5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="样式" id="2NH-sy-XcP">
+                        <barButtonItem key="rightBarButtonItem" title="next" id="03N-ss-Dus">
+                            <connections>
+                                <segue destination="LaU-oe-Zmj" kind="show" id="CfZ-Uj-71P"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1357.5" y="429"/>
+        </scene>
+        <!--滚动的图片-->
+        <scene sceneID="2x4-sO-jQp">
+            <objects>
+                <viewController storyboardIdentifier="NextViewController" id="0b5-SJ-FaG" customClass="NextViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jQm-N8-Wlp"/>
+                        <viewControllerLayoutGuide type="bottom" id="TX7-7T-tRD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MQK-VN-Zyh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mUZ-2L-vAb">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="4VY-Kc-RFq"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4VY-Kc-RFq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="4VY-Kc-RFq"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TX7-7T-tRD" firstAttribute="top" secondItem="mUZ-2L-vAb" secondAttribute="bottom" id="eZt-1H-4RF"/>
+                            <constraint firstAttribute="trailing" secondItem="mUZ-2L-vAb" secondAttribute="trailing" id="jah-hF-pbM"/>
+                            <constraint firstItem="mUZ-2L-vAb" firstAttribute="leading" secondItem="MQK-VN-Zyh" secondAttribute="leading" id="kIq-va-Iqa"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="mUZ-2L-vAb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="eZt-1H-4RF"/>
+                                <exclude reference="jah-hF-pbM"/>
+                                <exclude reference="kIq-va-Iqa"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="mUZ-2L-vAb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="eZt-1H-4RF"/>
+                                <include reference="jah-hF-pbM"/>
+                                <include reference="kIq-va-Iqa"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="滚动的图片" id="zs1-SQ-dRE"/>
+                    <connections>
+                        <outlet property="scroll" destination="mUZ-2L-vAb" id="Xjv-D1-jfM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3iV-Cq-H1R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2980.5" y="429"/>
+        </scene>
+        <!--firstVC-->
+        <scene sceneID="umt-ce-X5p">
+            <objects>
+                <viewController storyboardIdentifier="FirstVCIDF" id="U0b-Mm-i4c" customClass="FirstVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gg0-59-H5B"/>
+                        <viewControllerLayoutGuide type="bottom" id="koE-T6-PsX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8pt-mp-PEi">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5n-jl-HJH">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="makeToast:">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="79" width="288" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="make1:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="wpu-3b-bZp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erZ-Eo-zHL">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="makeToast:duration:position:image:">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="225" width="244" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="make5:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="yBy-SQ-IyI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxL-Tk-kpo">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="makeToastActivity">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="263" width="124" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="activity1:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="09J-Rc-5qK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtW-ne-3tU">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="makeToast:duration:position:title:">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="149" width="228" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="make3:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="1pQ-hq-Aed"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeK-PH-3nc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="makeToast:duration:position:">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="117" width="198" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="make2:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="lFK-Ii-j0x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMe-E2-7lj">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="makeToast:duration:position:title:image:">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="187" width="274" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="make4:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="0ep-Hb-UX4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHQ-H2-lVk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="hideToastActivity">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="339" width="116" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="hideActivity:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="F8A-p0-hDY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5z-NR-sf0">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="showToast">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="370" width="74" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="showToast:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="4Uk-pX-n6E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IF-cv-WZF">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="showToast:duration:position">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="408" width="193" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="showToast2:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="Yn9-nQ-v5j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPo-ek-7aI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="makeToastActivity:">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="301" width="129" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="activity2:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="oFl-Ud-zMU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="C5n-jl-HJH"/>
+                                <exclude reference="erZ-Eo-zHL"/>
+                                <exclude reference="qxL-Tk-kpo"/>
+                                <exclude reference="YtW-ne-3tU"/>
+                                <exclude reference="OeK-PH-3nc"/>
+                                <exclude reference="GMe-E2-7lj"/>
+                                <exclude reference="VHQ-H2-lVk"/>
+                                <exclude reference="P5z-NR-sf0"/>
+                                <exclude reference="5IF-cv-WZF"/>
+                                <exclude reference="gPo-ek-7aI"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="C5n-jl-HJH"/>
+                                <include reference="erZ-Eo-zHL"/>
+                                <include reference="qxL-Tk-kpo"/>
+                                <include reference="YtW-ne-3tU"/>
+                                <include reference="OeK-PH-3nc"/>
+                                <include reference="GMe-E2-7lj"/>
+                                <include reference="VHQ-H2-lVk"/>
+                                <include reference="P5z-NR-sf0"/>
+                                <include reference="5IF-cv-WZF"/>
+                                <include reference="gPo-ek-7aI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="firstVC" id="ohf-QQ-DXX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQi-qI-Zph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1357.5" y="-303"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FQd-gk-fVa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uet-yz-kRj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W0U-QJ-5Yp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="lQf-Sv-zs4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNW-8f-kFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="601.5" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ATk-oO-h9K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LaU-oe-Zmj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rXI-Qu-saW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0b5-SJ-FaG" kind="relationship" relationship="rootViewController" id="PtC-Ae-LqU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sKG-Ul-LGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2205" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="b8E-qf-8Dw">
+            <objects>
+                <navigationController storyboardIdentifier="navidf" automaticallyAdjustsScrollViewInsets="NO" id="JcC-6A-AbP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rYj-xS-PsM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="U0b-Mm-i4c" kind="relationship" relationship="rootViewController" id="YdV-nO-ba5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G89-I7-QId" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="601.5" y="-303"/>
+        </scene>
+    </scenes>
+</document>
