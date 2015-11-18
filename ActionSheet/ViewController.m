@@ -38,7 +38,7 @@
 - (void)addGridView{
     
     NSMutableArray *imgArray = [[NSMutableArray alloc] initWithObjects:@"png_a_0",@"png_a_0", @"png_a_0",@"png_a_0",@"png_a_0",nil];
-    NSMutableArray *labArray = [[NSMutableArray alloc] initWithObjects:@"1111",@"2222",@"3333",@"4444",@"5555", nil];
+    NSMutableArray *labArray = [[NSMutableArray alloc] initWithObjects:@"1111",@"FirstVC",@"3333",@"4444",@"5555", nil];
     
     GridView *gridView =[[GridView alloc] initWithFrame:CGRectMake(0,self.view.frame.size.height-200,self.view.frame.size.width, 150) delegate:self buttonImage:imgArray title:labArray numberOfRows:4];
     gridView.isShowLine = YES;
@@ -71,6 +71,7 @@
     }
     if (control) {
         [self.navigationController pushViewController:control animated:YES];
+
     }
     
 }

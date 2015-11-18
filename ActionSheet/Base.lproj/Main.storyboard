@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Uet-yz-kRj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Uet-yz-kRj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--样式-->
@@ -247,9 +249,14 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="样式" id="2NH-sy-XcP">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="KT6-dn-UP5">
+                            <connections>
+                                <segue destination="KV3-tj-TK5" kind="show" identifier="secondVCUnWind" customClass="CusStoryboardSegue" id="Afx-QN-YLC"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="next" id="03N-ss-Dus">
                             <connections>
-                                <segue destination="LaU-oe-Zmj" kind="show" id="CfZ-Uj-71P"/>
+                                <segue destination="0b5-SJ-FaG" kind="show" id="j38-cB-fUr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -257,6 +264,117 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1357.5" y="429"/>
+        </scene>
+        <!--first-->
+        <scene sceneID="Yi9-9N-dFM">
+            <objects>
+                <viewController storyboardIdentifier="FirstVCIDF" id="cg9-JC-6Rm" customClass="FirstVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rhK-En-rGP"/>
+                        <viewControllerLayoutGuide type="bottom" id="jMP-PX-PH5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PiS-tZ-eg2">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_user_df" translatesAutoresizingMaskIntoConstraints="NO" id="pih-1q-8l1">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pih-1q-8l1" secondAttribute="height" multiplier="1:1" id="PNA-kJ-MIK"/>
+                                    <constraint firstAttribute="width" constant="60" id="wA1-Hk-Jqt"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PNA-kJ-MIK"/>
+                                        <exclude reference="wA1-Hk-Jqt"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="PNA-kJ-MIK"/>
+                                        <exclude reference="wA1-Hk-Jqt"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lBR-yI-boc" appends="YES" id="vat-MG-bKS"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pih-1q-8l1" firstAttribute="centerX" secondItem="PiS-tZ-eg2" secondAttribute="centerX" id="Fpr-V3-B7b"/>
+                            <constraint firstItem="pih-1q-8l1" firstAttribute="leading" secondItem="PiS-tZ-eg2" secondAttribute="leading" constant="100" id="ejJ-wf-x4q"/>
+                            <constraint firstItem="pih-1q-8l1" firstAttribute="leading" secondItem="PiS-tZ-eg2" secondAttribute="leading" constant="150" id="occ-j4-IfR">
+                                <variation key="widthClass=compact" constant="120"/>
+                            </constraint>
+                            <constraint firstItem="pih-1q-8l1" firstAttribute="top" secondItem="rhK-En-rGP" secondAttribute="bottom" constant="25" id="y5x-im-7y3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="pih-1q-8l1"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Fpr-V3-B7b"/>
+                                <exclude reference="ejJ-wf-x4q"/>
+                                <exclude reference="occ-j4-IfR"/>
+                                <exclude reference="y5x-im-7y3"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="pih-1q-8l1"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Fpr-V3-B7b"/>
+                                <exclude reference="ejJ-wf-x4q"/>
+                                <include reference="occ-j4-IfR"/>
+                                <include reference="y5x-im-7y3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="first" id="Vp5-zM-0Ew"/>
+                    <connections>
+                        <outlet property="iconImageView" destination="pih-1q-8l1" id="TWT-QW-Hfz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o80-ZI-a8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="lBR-yI-boc">
+                    <connections>
+                        <action selector="iconImageViewTap:" destination="cg9-JC-6Rm" id="0cp-3n-7cr"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2275.5" y="1456"/>
+        </scene>
+        <!--item2-->
+        <scene sceneID="LmY-e8-Ust">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewControllerIDF" id="KV3-tj-TK5" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Xj-06-kqV"/>
+                        <viewControllerLayoutGuide type="bottom" id="P2z-vx-Lxc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="trY-4A-nOe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97838614479999997" green="1" blue="0.8809146135" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="item2" id="99A-mB-n47">
+                        <barButtonItem key="rightBarButtonItem" title="back" id="qIX-f1-0lx">
+                            <connections>
+                                <action selector="backItemClick:" destination="KV3-tj-TK5" id="PFw-tX-cdh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backItem" destination="qIX-f1-0lx" id="t4V-J6-Q5y"/>
+                        <segue destination="FZy-fN-uVw" kind="unwind" customClass="CustomSegueUnWind" unwindAction="viewOutAnimation:" id="zsa-5u-2Ed"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q0q-9y-3Kf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="FZy-fN-uVw" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2334" y="741"/>
         </scene>
         <!--滚动的图片-->
         <scene sceneID="2x4-sO-jQp">
@@ -269,227 +387,13 @@
                     <view key="view" contentMode="scaleToFill" id="MQK-VN-Zyh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mUZ-2L-vAb">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="4VY-Kc-RFq"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="4VY-Kc-RFq"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="4VY-Kc-RFq"/>
-                                    </mask>
-                                </variation>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="TX7-7T-tRD" firstAttribute="top" secondItem="mUZ-2L-vAb" secondAttribute="bottom" id="eZt-1H-4RF"/>
-                            <constraint firstAttribute="trailing" secondItem="mUZ-2L-vAb" secondAttribute="trailing" id="jah-hF-pbM"/>
-                            <constraint firstItem="mUZ-2L-vAb" firstAttribute="leading" secondItem="MQK-VN-Zyh" secondAttribute="leading" id="kIq-va-Iqa"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="mUZ-2L-vAb"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="eZt-1H-4RF"/>
-                                <exclude reference="jah-hF-pbM"/>
-                                <exclude reference="kIq-va-Iqa"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="mUZ-2L-vAb"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="eZt-1H-4RF"/>
-                                <include reference="jah-hF-pbM"/>
-                                <include reference="kIq-va-Iqa"/>
-                            </mask>
-                        </variation>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="滚动的图片" id="zs1-SQ-dRE"/>
-                    <connections>
-                        <outlet property="scroll" destination="mUZ-2L-vAb" id="Xjv-D1-jfM"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3iV-Cq-H1R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2980.5" y="429"/>
-        </scene>
-        <!--firstVC-->
-        <scene sceneID="umt-ce-X5p">
-            <objects>
-                <viewController storyboardIdentifier="FirstVCIDF" id="U0b-Mm-i4c" customClass="FirstVC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Gg0-59-H5B"/>
-                        <viewControllerLayoutGuide type="bottom" id="koE-T6-PsX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8pt-mp-PEi">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5n-jl-HJH">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="makeToast:">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="79" width="288" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="make1:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="wpu-3b-bZp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erZ-Eo-zHL">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="makeToast:duration:position:image:">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="225" width="244" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="make5:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="yBy-SQ-IyI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxL-Tk-kpo">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="makeToastActivity">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="263" width="124" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="activity1:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="09J-Rc-5qK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtW-ne-3tU">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="makeToast:duration:position:title:">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="149" width="228" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="make3:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="1pQ-hq-Aed"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeK-PH-3nc">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="makeToast:duration:position:">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="117" width="198" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="make2:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="lFK-Ii-j0x"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMe-E2-7lj">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="makeToast:duration:position:title:image:">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="187" width="274" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="make4:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="0ep-Hb-UX4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHQ-H2-lVk">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="hideToastActivity">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="339" width="116" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="hideActivity:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="F8A-p0-hDY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5z-NR-sf0">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="showToast">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="370" width="74" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="showToast:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="4Uk-pX-n6E"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IF-cv-WZF">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="showToast:duration:position">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="408" width="193" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="showToast2:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="Yn9-nQ-v5j"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPo-ek-7aI">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="makeToastActivity:">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="301" width="129" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="activity2:" destination="U0b-Mm-i4c" eventType="touchUpInside" id="oFl-Ud-zMU"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="C5n-jl-HJH"/>
-                                <exclude reference="erZ-Eo-zHL"/>
-                                <exclude reference="qxL-Tk-kpo"/>
-                                <exclude reference="YtW-ne-3tU"/>
-                                <exclude reference="OeK-PH-3nc"/>
-                                <exclude reference="GMe-E2-7lj"/>
-                                <exclude reference="VHQ-H2-lVk"/>
-                                <exclude reference="P5z-NR-sf0"/>
-                                <exclude reference="5IF-cv-WZF"/>
-                                <exclude reference="gPo-ek-7aI"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="C5n-jl-HJH"/>
-                                <include reference="erZ-Eo-zHL"/>
-                                <include reference="qxL-Tk-kpo"/>
-                                <include reference="YtW-ne-3tU"/>
-                                <include reference="OeK-PH-3nc"/>
-                                <include reference="GMe-E2-7lj"/>
-                                <include reference="VHQ-H2-lVk"/>
-                                <include reference="P5z-NR-sf0"/>
-                                <include reference="5IF-cv-WZF"/>
-                                <include reference="gPo-ek-7aI"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <navigationItem key="navigationItem" title="firstVC" id="ohf-QQ-DXX"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WQi-qI-Zph" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1357.5" y="-303"/>
+            <point key="canvasLocation" x="2281.5" y="59"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FQd-gk-fVa">
@@ -510,40 +414,25 @@
             <point key="canvasLocation" x="601.5" y="429"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="ATk-oO-h9K">
+        <scene sceneID="yS8-hU-vWE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LaU-oe-Zmj" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ukv-Ds-thz" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rXI-Qu-saW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZG0-xf-Bxn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="0b5-SJ-FaG" kind="relationship" relationship="rootViewController" id="PtC-Ae-LqU"/>
+                        <segue destination="cg9-JC-6Rm" kind="relationship" relationship="rootViewController" id="sT9-CT-loe"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sKG-Ul-LGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xB-RZ-DdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2205" y="429"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="b8E-qf-8Dw">
-            <objects>
-                <navigationController storyboardIdentifier="navidf" automaticallyAdjustsScrollViewInsets="NO" id="JcC-6A-AbP" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rYj-xS-PsM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="U0b-Mm-i4c" kind="relationship" relationship="rootViewController" id="YdV-nO-ba5"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G89-I7-QId" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="601.5" y="-303"/>
+            <point key="canvasLocation" x="1357.5" y="1456"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_user_df" width="143" height="143"/>
+    </resources>
 </document>
